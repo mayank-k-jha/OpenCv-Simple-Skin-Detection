@@ -18,7 +18,7 @@ try:
     
     cap=cv2.VideoCapture(0)
     fourcc=cv2.VideoWriter_fourcc(*'DIVX')
-    output=cv2.VideoWriter('D:/Development/Python Dev/capture1.mp4',fourcc,1.0,(640,480),True)
+    output=cv2.VideoWriter('D:/capture1.mp4',fourcc,1.0,(640,480),True)
        
     while(True):
         ret,frame=cap.read()
@@ -35,6 +35,7 @@ try:
     output.release()
     cv2.destroyAllWindows()
     cap=cv2.VideoCapture('D:/Development/Python Dev/capture1.mp4')
+    """Above set your own location"""
     while(cap.isOpened()):
         ret,f=cap.read()
         cv2.resizeWindow('Cam',640,460)
